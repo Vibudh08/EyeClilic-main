@@ -1,18 +1,19 @@
-
-import './App.css';
-import {BrowserRouter,Routes,Route} from 'react-router-dom';
-import Home from './Components/Home';
-import Nav from './Components/Nav';
-import Footer from './Components/Footer';
-import Shop from './Components/shop/shop';
-import Aboutus from './Components/aboutus/Aboutus';
-import Contactus from './Components/contact/Contactus';
-import Login from './Components/Login';
-import Register from './Components/Register';
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Components/Home";
+import Nav from "./Components/Nav";
+import Footer from "./Components/Footer";
+import Shop from "./Components/shop/shop";
+import Aboutus from "./Components/aboutus/Aboutus";
+import Contactus from "./Components/contact/Contactus";
+import Login from "./Components/Login";
+import Register from "./Components/Register";
 import Profile from "./Components/account/Profile";
 import Orders from "./Components/account/Orders";
 import Address from "./Components/account/Address";
 import Wishlist from "./Components/account/Wishlist";
+import PasswordRecovery from "./Components/account/PasswordRecovery";
+
 function App() {
   return (
     <BrowserRouter>
@@ -28,6 +29,8 @@ function App() {
         <Route path="/address" element={<Address />} />
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/orders" element={<Orders />} />
+        <Route path="/passwordrecovery" element={<PasswordRecovery />} />
+        {/* <Route path="/login/passwordrecovery" element={<PasswordRecovery />} /> */}
       </Routes>
       <Footer />
     </BrowserRouter>

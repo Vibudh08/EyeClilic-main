@@ -40,10 +40,7 @@ export default function Nav() {
                 <div class="menu_area alt-font">
                   <nav class="navbar navbar-expand-lg navbar-light p-0">
                     <div class="navbar-header navbar-header-custom">
-                      <Link
-                        to="/"
-                        class="navbar-brand logodefault"
-                      >
+                      <Link to="/" class="navbar-brand logodefault">
                         <img
                           id="logo"
                           src="../img/logos/logo-color3.png"
@@ -71,22 +68,22 @@ export default function Nav() {
                         <Link to="/">Account</Link>
                         <ul>
                           <li>
-                            <Link to="account-password-recovery.html">
-                              Password Recovery
-                            </Link>
+                            <Link to="/profile">Profile Page</Link>
                           </li>
                           <li>
                             <Link to="/orders">Orders List</Link>
                           </li>
                           <li>
+                            <Link to="/address">
+                              Contact / Shipping Address
+                            </Link>
+                          </li>
+                          <li>
                             <Link to="/wishlist">Wishlist</Link>
                           </li>
                           <li>
-                            <Link to="/profile">Profile Page</Link>
-                          </li>
-                          <li>
-                            <Link to="/address">
-                              Contact / Shipping Address
+                            <Link to="/passwordrecovery">
+                              Password Recovery
                             </Link>
                           </li>
                         </ul>

@@ -8,10 +8,6 @@ import Wishlist from "./Wishlist";
 export default function LeftMenu() {
   return (
     <>
-      {/* <PageTitle />
-      <section class="md">
-        <div class="container">
-          <div class="row justify-content-center"> */}
       <div className="col-lg-4 col-sm-9 mb-2-3 mb-lg-0">
         <div className="account-pannel">
           <div className="p-4">

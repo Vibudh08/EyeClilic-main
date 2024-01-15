@@ -1,12 +1,16 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 function Login() {
+  useEffect(() => {
+    // 👇️ scroll to top on page load
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
   return (
     <section class="md">
       <div class="container d-flex justify-content-center">
         <div class="row col-lg-6 mb-1-9 mb-lg-0">
-        
           <div class="common-block">
             <div class="inner-title">
               <h4 class="mb-0">Login</h4>
@@ -55,7 +59,7 @@ function Login() {
                   </div>
                 </div>
                 <div class="col-sm-6 text-start text-md-end">
-                  <Link to="account-password-recovery.html" class="m-link-muted">
+                  <Link to="/passwordrecovery" class="m-link-muted">
                     Forgot password?
                   </Link>
                 </div>
@@ -74,7 +78,6 @@ function Login() {
             </form>
           </div>
         </div>
-       
       </div>
     </section>
   );

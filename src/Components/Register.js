@@ -1,8 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import { useEffect } from "react";
 
 function Register() {
-
+useEffect(() => {
+  // 👇️ scroll to top on page load
+  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+}, []);
   return (
     <section className="md ">
       <div className="container">
