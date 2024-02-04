@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./Components/Home";
+import Home from "./Components/home/Home";
 import Nav from "./Components/Nav";
 import Footer from "./Components/Footer";
 import Shop from "./Components/shop/shop";
@@ -12,6 +12,7 @@ import Profile from "./Components/account/Profile";
 import Orders from "./Components/account/Orders";
 import Address from "./Components/account/Address";
 import Wishlist from "./Components/account/Wishlist";
+import ProductDetails from "./Components/productDetails/productDetails";
 import PasswordRecovery from "./Components/account/PasswordRecovery";
 
 function App() {
@@ -29,8 +30,8 @@ function App() {
         <Route path="/address" element={<Address />} />
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/orders" element={<Orders />} />
+        <Route path="/productDetails" element={<ProductDetails />} />
         <Route path="/passwordrecovery" element={<PasswordRecovery />} />
-        {/* <Route path="/login/passwordrecovery" element={<PasswordRecovery />} /> */}
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -1,9 +1,5 @@
 import { Link } from "react-router-dom";
-import Address from "./Address";
-import Orders from "./Orders";
-import PageTitle from "./PageTitle";
-import Profile from "./Profile";
-import Wishlist from "./Wishlist";
+
 
 export default function LeftMenu() {
   return (

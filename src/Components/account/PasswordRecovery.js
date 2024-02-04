@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import PageTitle from "./PageTitle";
 import { useEffect } from "react";
 
 export default function PasswordRecovery() {
@@ -9,7 +8,6 @@ export default function PasswordRecovery() {
   }, []);
   return (
     <>
-      <PageTitle />
       <section class="md">
         <div class="container">
           <div class="row justify-content-center">

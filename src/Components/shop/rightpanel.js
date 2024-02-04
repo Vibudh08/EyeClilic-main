@@ -1,8 +1,8 @@
 import React from 'react'
-import Items from './Items'
 
 
 export default function rightpanel() {
+    const data = [1256,259,456,785,254,3000,2599,549,2259]
   return (
    <>
    <div class="col-lg-9 col-12 ps-lg-1-9 order-1 order-lg-2 mb-1-9 mb-lg-0">
@@ -48,14 +48,29 @@ export default function rightpanel() {
    </div>
 
    <div class="row justify-content-center">
-
-    <Items/>
-    <Items/>
-    <Items/>
-    <Items/>
-    <Items/>
-    <Items/>
-
+    {data.map((item,index)=>(
+        <div class="col-11 col-sm-6 col-xl-4 mb-1-9" key={index}>
+        <div class="product-grid">
+            <div class="product-img" >
+                <a href="/productDetails"><img src="img/product-categories/product-03.jpg" alt="..."/></a>
+            </div>
+            <div class="product-description">
+                <h3><a href="shop-product-detail.html">Glasses</a></h3>
+                <h4 class="price">
+                                <span class="offer-price">Rs {item}</span>
+                            </h4>
+            </div>
+            <div class="product-buttons">
+                <ul class="ps-0">
+                    <li><a href="/" class="btn-link" title="Add To Wishlist"><i class="far fa-heart"></i></a></li>
+                    <li><a href="/" class="butn-style2" title="Add to Cart">Add to Cart</a></li>
+                    <li><a href="/" class="btn-link" title="Add To Compare"><i class="fas fa-random"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    ))}
+        
    </div>
 
   

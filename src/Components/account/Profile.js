@@ -1,15 +1,17 @@
 import LeftMenu from "./LeftMenu";
-import PageTitle from "./PageTitle";
+import PageTitle from "../title";
 import { useEffect } from "react";
+
 
 export default function Profile() {
   useEffect(() => {
     // 👇️ scroll to top on page load
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
+    const data = "Profile"
   return (
     <>
-      <PageTitle/>
+      <PageTitle message={data}/>
       <section class="md">
         <div class="container">
           <div class="row justify-content-center">
@@ -17,7 +19,7 @@ export default function Profile() {
             <div class="col-lg-8">
               <div class="common-block">
                 <div class="inner-title">
-                  <h4 class="mb-0">My Profile</h4>
+                  <h4 class="mb-0">My {data}</h4>
                   <p class="mb-0">Time for a Sharp My profile.</p>
                 </div>
 
@@ -111,7 +113,7 @@ export default function Profile() {
                         />
                         <label class="form-check-label" for="terms-condition">
                           I agree to the{" "}
-                          <a href="#" class="text-primary">
+                          <a href="/" class="text-primary">
                             Terms & Conditions
                           </a>
                         </label>

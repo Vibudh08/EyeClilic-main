@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 export default function Footer() {
   return (
@@ -113,7 +114,7 @@ export default function Footer() {
                     <div class="row align-items-center">
                         <div class="col-md-6 mb-3 mb-md-0">
                             <div class="text-center text-md-start">
-                                <p class="mb-0">&copy; <span class="current-year"></span> Smartshop is Powered by <a href="https://www.chitrakootweb.com/" class="text-dark">Chitrakoot Web</a></p>
+                                <p class="mb-0">&copy; <span class="current-year"></span> Netra Jyoti Eye Clinic | Design by <Link to="https://jogendra-yadav.netlify.app/" target="_blank" class="text-purple">Jogendra Yadav</Link></p>
                             </div>
                         </div>
                         <div class="col-md-6">

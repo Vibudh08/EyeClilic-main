@@ -13,8 +13,10 @@ export default function sidepanel() {
                 <div class="card">
                     <div class="card-header" id="headingOne">
                         <h5 class="mb-0">
-                    <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Shirts</button>
-                        </h5>
+                    <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Formal Glasses
+                    </button>
+                    </h5>
                     </div>
                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion">
                         <div class="card-body">
@@ -161,7 +163,7 @@ export default function sidepanel() {
                                 <li class="form-check text-start">
                                     <input class="form-check-input" type="checkbox" value="" id="ten_pecentage" />
                                     <label class="form-check-label" for="ten_pecentage">10% off or more</label>
-                                </li>
+                                </li>``
 
                                 <li class="form-check text-start">
                                     <input class="form-check-input" type="checkbox" value="" id="twenty_pecentage" />

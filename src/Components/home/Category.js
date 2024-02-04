@@ -1,62 +1,30 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 export default function Category() {
-  return (
-    <div>
-        <section>
-        <div class="container">
-            <div class="row mt-n1-9 text-center">
-                <div class="col-sm-6 col-md-4 col-lg-2 mt-1-9">
-                    <a href="shop-categories.html" class="categoty-style2">
-                        <div class="category-icon mb-4">
-                            <img src="img/icons/icon-4.png" alt="..." />
-                        </div>
-                        <h3 class="font-weight-500 mb-0">Bathroom</h3>
-                    </a>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-2 mt-1-9">
-                    <a href="shop-categories.html" class="categoty-style2">
-                        <div class="category-icon mb-4">
-                            <img src="img/icons/icon-5.png" alt="..." />
-                        </div>
-                        <h3 class="font-weight-500 mb-0">Dining Table</h3>
-                    </a>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-2 mt-1-9">
-                    <a href="shop-categories.html" class="categoty-style2">
-                        <div class="category-icon mb-4">
-                            <img src="img/icons/icon-6.png" alt="..." />
-                        </div>
-                        <h3 class="font-weight-500 mb-0">Chair</h3>
-                    </a>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-2 mt-1-9">
-                    <a href="shop-categories.html" class="categoty-style2">
-                        <div class="category-icon mb-4">
-                            <img src="img/icons/icon-7.png" alt="..." />
-                        </div>
-                        <h3 class="font-weight-500 mb-0">Sofas & Sectionals</h3>
-                    </a>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-2 mt-1-9">
-                    <a href="shop-categories.html" class="categoty-style2">
-                        <div class="category-icon mb-4">
-                            <img src="img/icons/icon-8.png" alt="..." />
-                        </div>
-                        <h3 class="font-weight-500 mb-0">Cupboard</h3>
-                    </a>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-2 mt-1-9">
-                    <a href="shop-categories.html" class="categoty-style2">
-                        <div class="category-icon mb-4">
-                            <img src="img/icons/icon-9.png" alt="..." />
-                        </div>
-                        <h3 class="font-weight-500 mb-0">Bedroom</h3>
-                    </a>
-                </div>
+    const data ={
+        name :['Bathroom','Dinning Table','Chair','Soafs','Cupboard','Bedroom'],
+        img :[4,5,6,7,8,9]
+    }
+    return (
+        <div>
+          <section>
+            <div className="container">
+              <div className="row mt-n1-9 text-center">
+                {data.name.map((category, index) => (
+                  <div key={index} className="col-sm-6 col-md-4 col-lg-2 mt-1-9">
+                    <Link to="/" className="categoty-style2">
+                      <div className="category-icon mb-4">
+                        {/* Assuming that the images are named as 'icon-1.png', 'icon-2.png', etc. */}
+                        <img src={`img/icons/icon-${data.img[index]}.png`} alt={`Icon for ${category}`} />
+                      </div>
+                      <h3 className="font-weight-500 mb-0">{category}</h3>
+                    </Link>
+                  </div>
+                ))}
+              </div>
             </div>
+          </section>
         </div>
-    </section>
-    </div>
-  )
-}
+      );
+    }

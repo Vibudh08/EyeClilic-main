@@ -1,7 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function Nav() {
+  useEffect(() => {
+    // 👇️ scroll to top on page load
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
   return (
     <div>
       <div class="main-wrapper mp-pusher" id="mp-pusher"></div>
@@ -40,7 +45,10 @@ export default function Nav() {
                 <div class="menu_area alt-font">
                   <nav class="navbar navbar-expand-lg navbar-light p-0">
                     <div class="navbar-header navbar-header-custom">
-                      <Link to="/" class="navbar-brand logodefault">
+                      <Link
+                        to="/"
+                        class="navbar-brand logodefault"
+                      >
                         <img
                           id="logo"
                           src="../img/logos/logo-color3.png"
@@ -65,28 +73,8 @@ export default function Nav() {
                         <Link to="/aboutus">About Us</Link>
                       </li>
                       <li>
-                        <Link to="/">Account</Link>
-                        <ul>
-                          <li>
-                            <Link to="/profile">Profile Page</Link>
-                          </li>
-                          <li>
-                            <Link to="/orders">Orders List</Link>
-                          </li>
-                          <li>
-                            <Link to="/address">
-                              Contact / Shipping Address
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="/wishlist">Wishlist</Link>
-                          </li>
-                          <li>
-                            <Link to="/passwordrecovery">
-                              Password Recovery
-                            </Link>
-                          </li>
-                        </ul>
+                        <Link to="/profile">Account</Link>
+                        
                       </li>
                       <li>
                         <Link to="register">Register</Link>
